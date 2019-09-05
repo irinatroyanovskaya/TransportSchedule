@@ -1,0 +1,30 @@
+﻿<Window x:Class="TransportSchedule.UI.EditFavouritesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransportSchedule.UI"
+        mc:Ignorable="d"
+        Title="Edit Favourites" Height="200" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock Name="StationTextBlock" FontSize="20" Margin="10">Station:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" Margin="10">Description:</TextBlock>
+                <TextBox Name="DescriptionTextBlock" Width="250" Margin="10" FontSize="20"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Grid.Row="2" Margin="5" Width="80" Height="25" FontSize="16" Background="#FFBFCBEC" BorderBrush="#FFBFCBEC" Name="OkButton" Click="OkButton_Click" VerticalAlignment="Top">Ok
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="1" Opacity="0.67" Color="#FFB8BFE6" ShadowDepth="3"/>
+                    </Button.Effect>
+                </Button>
+                <Button Grid.Row="2" Margin="5" Width="80" Height="25" FontSize="16" Background="#FFBFCBEC" BorderBrush="#FFBFCBEC" Name="CancelButton" Click="CancelButton_Click" VerticalAlignment="Top">Cancel
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="1" Opacity="0.67" Color="#FFB8BFE6" ShadowDepth="3"/>
+                    </Button.Effect>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

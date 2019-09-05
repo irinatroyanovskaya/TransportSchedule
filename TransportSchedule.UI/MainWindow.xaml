@@ -1,0 +1,28 @@
+﻿<Window x:Class="TransportSchedule.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransportSchedule.UI"
+        mc:Ignorable="d"
+        Title="Transport Schedule" Height="600" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Width="490">
+            <TextBlock HorizontalAlignment="Left" Margin="20 10 10 0" Height="auto" Width="auto" FontSize="14" Foreground="DarkBlue" Name="UserTextBox"></TextBlock>
+            <Button HorizontalAlignment="Right" Margin="15" Width="100" FontSize="16" Background="#FFBFCBEC" BorderBrush="#FFBFCBEC" Name="FavouritesButton" Click="FavouritesButton_Click">Favourites
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="1" Opacity="0.67" Color="#FFB8BFE6" ShadowDepth="3"/>
+                </Button.Effect>
+            </Button>
+            <TextBlock Margin="55 0 0 0" HorizontalAlignment="Left" FontSize="16">Select line:</TextBlock>
+            <ComboBox Margin="10" Width="380" FontSize="16" Name="SelectLineComboBox" DisplayMemberPath="Number" SelectionChanged="SelectLineComboBox_SelectionChanged" Background="{x:Null}"/>
+            <TextBlock Margin="55 10 0 0" HorizontalAlignment="Left" FontSize="16">Select station:</TextBlock>
+            <ComboBox Margin="10" Width="380" FontSize="16" Name="SelectStationComboBox" DisplayMemberPath="Name" SelectionChanged="SelectStationComboBox_SelectionChanged">
+            </ComboBox>
+            <TextBlock Height="auto" Width="auto" Margin="0 20 0 0" HorizontalAlignment="Center" FontSize="22">Next departures</TextBlock>
+            <DataGrid HorizontalAlignment="Center" Margin="15" Name="ScheduleDataGrid" FontSize="16" IsReadOnly="True" CanUserResizeRows="False" CanUserResizeColumns="False" CanUserSortColumns="False"
+                      CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" ColumnWidth="150" SelectionUnit="Cell" SelectionMode="Single" HeadersVisibility="Column">
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>
